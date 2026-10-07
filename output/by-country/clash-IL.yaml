@@ -20,18 +20,18 @@ proxies:
       Host: ccc.010304.xyz
 - name: 🇮🇱 IL 02 - xiaohe
   type: vless
-  server: 177.3.208.65
+  server: 185.253.75.119
   port: 443
-  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: tgmansion.site
+  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /vless-il
+    path: /
     headers:
-      Host: tgmansion.site
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: PROXIES
   type: select
