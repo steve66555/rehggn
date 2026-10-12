@@ -5,26 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: 52+ggoCvKFVJyT1NDiuWOZw2rHIvAg3tgqgJl8aeCwY=
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 188.114.97.3
-  port: 8443
-  uuid: a6fd8b83-7926-4b4e-884b-14f64e578815
+  server: es3.h1cloud.net
+  port: 25136
+  uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: dn044toytgxw7ya2rygfhrvpw6mbl.pabjienmi.workers.dev
+  reality-opts:
+    public-key: nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  type: vless
+  server: 91.215.43.248
+  port: 443
+  uuid: a5893c8b-28a2-4947-9a1c-708db25506c3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: my.kempekl.online
   network: ws
   ws-opts:
-    path: /vl/w47aznWVyUF9g3ciQ6GVv?ed=2560
+    path: /gateway/v1/ws/a64eb463966ba9c4bfd628f1de0362ae
     headers:
-      Host: dn044toytgxw7ya2rygfhrvpw6mbl.pabjienmi.workers.dev
+      Host: my.kempekl.online
 proxy-groups:
 - name: PROXIES
   type: select
