@@ -6,6 +6,13 @@ log-level: info
 proxies:
 - name: 🇮🇪 IE 01 - xiaohe
   type: ss
+  server: 4.210.68.244
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: UUjphkQAh5BkOdbf
+  udp: true
+- name: 🇮🇪 IE 02 - xiaohe
+  type: ss
   server: 20.223.172.81
   port: 443
   cipher: chacha20-ietf-poly1305
@@ -17,11 +24,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇪 IE 01 - xiaohe
+  - 🇮🇪 IE 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 IE 01 - xiaohe
+  - 🇮🇪 IE 02 - xiaohe
 rules:
 - MATCH,PROXIES
