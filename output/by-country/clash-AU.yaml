@@ -4,33 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇪 EE 01 - xiaohe
-  type: vmess
-  server: eu3.998998.best
+- name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
+  type: vless
+  server: 104.18.155.229
   port: 443
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  alterId: 0
-  cipher: auto
+  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: server40.9966338.xyz
+  servername: www.genflix.co.id.r3xxe.eu.cc
   network: ws
   ws-opts:
-    path: /aiaiai
+    path: /au-do
     headers:
-      Host: server40.9966338.xyz
+      Host: www.genflix.co.id.r3xxe.eu.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇪 EE 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇪 EE 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
 rules:
 - MATCH,PROXIES
