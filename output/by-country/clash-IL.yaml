@@ -4,25 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+- name: 🇮🇱 IL 01 - xiaohe
   type: vless
-  server: 112.169.175.199
-  port: 31157
-  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
+  server: 177.3.208.65
+  port: 443
+  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: tgmansion.site
+  network: ws
+  ws-opts:
+    path: /vless-il
+    headers:
+      Host: tgmansion.site
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇮🇱 IL 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇮🇱 IL 01 - xiaohe
 rules:
 - MATCH,PROXIES
