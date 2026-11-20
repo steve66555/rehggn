@@ -4,26 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR 01 - xiaohe
+- name: 🇩🇰 DK 01 - xiaohe
   type: vless
-  server: 87.248.149.50
+  server: 193.180.208.167
   port: 443
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: base.hosamobenl.co.uk
+  servername: v2n5.11676767.xyz
+  network: ws
+  ws-opts:
+    path: /doujin/channels/cb
+    headers:
+      Host: v2n5.11676767.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇷 IR 01 - xiaohe
+  - 🇩🇰 DK 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇷 IR 01 - xiaohe
+  - 🇩🇰 DK 01 - xiaohe
 rules:
 - MATCH,PROXIES
