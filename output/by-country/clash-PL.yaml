@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇵🇱 PL 01 - xiaohe
+  type: vless
+  server: 193.233.219.98
+  port: 443
+  uuid: 265ecca2-4733-49de-b2c9-ed7f0e999655
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: daily-author.ru
+  network: ws
+  ws-opts:
+    path: /api/vless
+    headers:
+      Host: vpn-rating.space
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇵🇱 PL 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇵🇱 PL 01 - xiaohe
+rules:
+- MATCH,PROXIES
