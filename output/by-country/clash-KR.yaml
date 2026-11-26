@@ -32,30 +32,24 @@ proxies:
       Host: 152.69.226.63
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
   type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  server: ifdmbpb.kdns.fr
+  port: 443
+  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
+  servername: ifdmbpb.kdns.fr
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
-  type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  type: vmess
+  server: kr.075661.xyz
+  port: 19283
+  uuid: 3153def6-eecb-414d-88aa-7e59ea525e5d
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
+  servername: kr.075661.xyz
 - name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
   type: vless
   server: 152.69.226.63
@@ -70,6 +64,30 @@ proxies:
     headers:
       Host: 152.69.226.63
 - name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  type: vmess
+  server: kr.075661.xyz
+  port: 19283
+  uuid: 3153def6-eecb-414d-88aa-7e59ea525e5d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: kr.075661.xyz
+- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  type: vless
+  server: 152.69.226.63
+  port: 25555
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.226.63
+- name: 🇰🇷 韩国 (South Korea) 08 - xiaohe
   type: vless
   server: 152.69.226.63
   port: 25555
@@ -93,6 +111,8 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
   - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -104,5 +124,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
   - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 08 - xiaohe
 rules:
 - MATCH,PROXIES
